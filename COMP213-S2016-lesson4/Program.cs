@@ -17,38 +17,23 @@ namespace COMP213_S2016_lesson4
          * @method main
          * @parm {string[]} args
          */
-        public static void Main(string[] args)
+
+        public static void Main (string[] args)
         {
-            // Create a new instance(object) of the person class
+            //create instance of student
+            Student Inder = new Student("Inder",18, "300874118");
 
-            Person Abhinav = new Person();
-            Abhinav.Name = "Tanya";
-            Abhinav.Age = 28;
-            Abhinav._sayHello();
-            Abhinav.ShowAge();
-
-            Console.WriteLine();
-
-
-            Person Inder = new Person("Inder");
-            Inder.Age = 18;
             Inder._sayHello();
-            Inder.ShowAge();
 
             Console.WriteLine();
 
-            Person Iqbal = new Person(30);
-            Iqbal.Name = "Iqbal";
-            Iqbal._sayHello();
-            Iqbal.ShowAge();
+            Inder.Studies();
 
+            //Create instance of teacher class
+            Teacher tom = new Teacher("Tom", 47, "123456789");
+            tom._sayHello();
             Console.WriteLine();
-
-            Person Khushi = new Person("Khusi", 23);
-
-            Khushi._sayHello();
-            Khushi.ShowAge();
-
+            tom.Teaches();
         }
     }
 }
